@@ -10,8 +10,8 @@ const userSchema = new mongoose.Schema({
     answers: {
         type: Object
     },
-    availability: {
-        email: String
+    userKey: {
+        type: String
     }
 }, {timestamps:true});
 
