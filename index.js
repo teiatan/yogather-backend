@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors({
     credentials: true,
-    origin: ['http://127.0.0.1:5173', 'https://yogather.netlify.app/', 'http://localhost:5173'],
+    origin: ['http://127.0.0.1:5173', 'https://yogather.netlify.app/', 'https://yogather.netlify.app', 'http://localhost:5173'],
 }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -54,6 +54,6 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
     cors: {
-        origin: ['http://127.0.0.1:5173', 'https://yogather.netlify.app/', 'http://localhost:5173'],
+        origin: ['http://127.0.0.1:5173', 'https://yogather.netlify.app/', 'https://yogather.netlify.app', 'http://localhost:5173'],
     }
 });
