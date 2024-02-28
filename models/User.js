@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
     availability: {
         email: String
     }
-});
+}, {timestamps:true});
 
 const UserModal = mongoose.model('User', userSchema);
 
