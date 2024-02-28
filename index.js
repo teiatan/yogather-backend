@@ -24,6 +24,11 @@ app.get('/test', (req, res) => {
     res.json('test ok');
 });
 
+app.get('/', async (req, res) => {
+    const result = await User.find();
+    res.json(result);
+});
+
 app.post('/', async (req, res) => {
     const body = req.body;
     const createdUser = await User.create(body);
